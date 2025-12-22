@@ -6,14 +6,9 @@ namespace MyConsoleApp.Day4
 {
     public class Employee
     {
-        /// <summary>
-        ///  this is private variable so cannot get the value 
-        /// </summary>
+
         private int id;
 
-        /// <summary>
-        /// using public variable we can access the value
-        /// </summary>
         public int Id
         {
             set
