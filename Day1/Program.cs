@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyConsoleApp.Day2
+namespace MyConsoleApp.Day1
 {
-    internal class EvenOrOdd
+    public class EvenOrOdd
     {
         public bool IsEven(int number)
         {

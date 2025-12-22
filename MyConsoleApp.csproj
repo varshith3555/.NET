@@ -5,6 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>MyConsoleApp.Day3.Inheritance</StartupObject>
   </PropertyGroup>
 
 </Project>

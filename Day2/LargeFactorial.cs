@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 using System.Text;
 
 namespace MyConsoleApp.Day2
@@ -9,7 +10,11 @@ namespace MyConsoleApp.Day2
         static void Main()
         {
             Console.Write("Enter number: ");
-            int n = int.Parse(Console.ReadLine());
+            if (!int.TryParse(Console.ReadLine(), out int n))
+            {
+                Console.WriteLine("Invalid input");
+                return;
+            }
 
             BigInteger fact = 1;
 
