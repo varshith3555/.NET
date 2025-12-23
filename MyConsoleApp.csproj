@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>MyConsoleApp.Day4.AssociateMain</StartupObject>
+    <StartupObject>MyConsoleApp.Day4.Constructor</StartupObject>
   </PropertyGroup>
 
 </Project>

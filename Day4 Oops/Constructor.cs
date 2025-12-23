@@ -21,7 +21,7 @@ namespace MyConsoleApp.Day4
             LogHistory += $" Object is created at {DateTime.Now.ToString()} \n";
         }
         /// <summary>
-        /// constructor with only single parameter
+        /// parameterised constructor with only single parameter
         /// </summary>
         /// <param name="id"></param>
         public Visitor(int id) : this() 
@@ -72,7 +72,7 @@ namespace MyConsoleApp.Day4
             /// </summary>
             try
             {
-                Visitor visitor = new Visitor(12201442, "Varshith", "PC");
+                Visitor visitor = new Visitor(12201442, "Capp", "PC");
                 Console.WriteLine($"ID: {visitor.ID}\nName: {visitor.Name}\nRequirement: {visitor.Requirement}");
                 Console.WriteLine($"Log History: \n {visitor.LogHistory}");
             }
