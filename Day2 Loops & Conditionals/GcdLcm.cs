@@ -26,8 +26,8 @@ namespace MyConsoleApp.Day2
 
             int lcm = (a * b) / gcd;
 
-            Console.WriteLine("GCD = " + gcd);
-            Console.WriteLine("LCM = " + lcm);
+            Console.WriteLine(gcd);
+            Console.WriteLine(lcm);
         }
     }
 }
