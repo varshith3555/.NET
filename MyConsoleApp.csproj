@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>MyConsoleApp.Day5_Abstract___Project_References.MainApp</StartupObject>
+    <StartupObject>MyConsoleApp.Day6.ExamSchedule</StartupObject>
   </PropertyGroup>
 
 </Project>
