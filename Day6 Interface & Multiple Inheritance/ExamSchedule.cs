@@ -11,10 +11,11 @@ namespace MyConsoleApp.Day6
         public Role Role { get; set; }
         public Department Department { get; set; }
 
+        // abstract method
         public abstract string GetRole();
     }
 
-    // Role class
+    // Role class - store role details.
     public class Role
     {
         public int RoleId { get; set; }
@@ -43,7 +44,10 @@ namespace MyConsoleApp.Day6
 
         public void ScheduleExam(Exam exam, DateTime date, TimeSpan start, TimeSpan end, string venue)
         {
-            Console.WriteLine($"HOD {Name} ({Department.DeptName}) scheduled {exam.Subject.SubjectName} exam on {date:d} at {venue}");
+            Console.WriteLine(
+                $"HOD {Name} ({Department.DeptName}) scheduled {exam.Subject.SubjectName} exam " +
+                $"for Semester {exam.Semester} with {exam.NumberOfStudents} students on {date:d} " +
+                $"from {start} to {end} at {venue}");
         }
 
         public void AssignExaminer(Exam exam, Examiner examiner)
@@ -68,6 +72,7 @@ namespace MyConsoleApp.Day6
     {
         public int ExamId { get; set; }
         public int Semester { get; set; }
+        public int NumberOfStudents { get; set; }
         public Subject Subject { get; set; }
     }
 
@@ -77,7 +82,12 @@ namespace MyConsoleApp.Day6
         {
             Department cse = new Department { DeptId = 1, DeptName = "CSE" };
 
-            Subject java = new Subject{SubjectId = 101, SubjectName = "Java Programming", Department = cse };
+            Subject java = new Subject
+            {
+                SubjectId = 101,
+                SubjectName = "Java Programming",
+                Department = cse
+            };
 
             HOD hod = new HOD
             {
@@ -95,7 +105,13 @@ namespace MyConsoleApp.Day6
                 Department = cse
             };
 
-            Exam exam = new Exam{ExamId = 1001,Semester = 5,Subject = java};
+            Exam exam = new Exam
+            {
+                ExamId = 1001,
+                Semester = 5,
+                NumberOfStudents = 10,
+                Subject = java
+            };
 
             hod.ScheduleExam(exam, DateTime.Today, new TimeSpan(10, 0, 0), new TimeSpan(12, 0, 0), "Hall A");
             hod.AssignExaminer(exam, examiner);
@@ -103,3 +119,4 @@ namespace MyConsoleApp.Day6
         }
     }
 }
+

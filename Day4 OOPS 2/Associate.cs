@@ -14,7 +14,7 @@ namespace MyConsoleApp.Day4
         private int id;
         private string name;
         private int rank;
-        public string Error;
+        public string Error;   /// The Error field is not encapsulated because it is directly exposed as a public field. until make it as private
 
         /// <summary>
         /// Public property for Id with validation

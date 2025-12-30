@@ -59,7 +59,7 @@ namespace MyConsoleApp.Day6
         //}
     }
 
-    public class MultipleInheritance
+    public class MultipleInterfaceInheritance
     {
         public static  void Main(string[] args)
         {

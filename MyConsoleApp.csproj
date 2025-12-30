@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>MyConsoleApp.Day6.ExamSchedule</StartupObject>
+    <StartupObject>MyConsoleApp.Day9.RegEx</StartupObject>
   </PropertyGroup>
 
 </Project>

@@ -7,7 +7,7 @@ namespace MyConsoleApp.Day4
     /// </summary>
     public class Visitor
     {
-
+        /// properties.
         public int ID { get; set; }
         public string Name { get; set; }
         public string Requirement { get; set; }
@@ -24,7 +24,7 @@ namespace MyConsoleApp.Day4
         /// parameterised constructor with only single parameter
         /// </summary>
         /// <param name="id"></param>
-        public Visitor(int id) : this() 
+        public Visitor(int id) : this()               // : this() is used for constructor chaining, one constructor to call another constructor of the same class
         {
             this.ID = id;
             LogHistory += $" ID is created at {DateTime.Now.ToString()} {Environment.NewLine}";
@@ -34,7 +34,7 @@ namespace MyConsoleApp.Day4
         /// </summary>
         /// <param name="id"></param>
         /// <param name="name"></param>
-        public Visitor(int id, string name) : this(id)
+        public Visitor(int id, string name) : this(id)       
         {
             //this.ID = id;
             this.Name = name;
