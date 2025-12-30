@@ -20,7 +20,8 @@ namespace MyConsoleApp.Day6
     public interface INonVegEater
     {
         void NonVeg();
-        string GetTaste(); 
+        string GetTaste(); //or void GetTaste();
+
     }
 
     // Visitor class implements both interfaces
