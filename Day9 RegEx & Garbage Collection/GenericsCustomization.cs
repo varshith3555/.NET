@@ -1,0 +1,81 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Text;
+
+namespace MyConsoleApp.Day9_RegEx___Garbage_Collection
+{
+     public class GenericsCustomization
+    {
+        public GenericsCustomization()
+        {
+        }
+
+        public void ExampleOfList()
+        {
+            List<string> names = new List<string>();
+
+
+        }
+
+    }
+
+    public class MyCollection : IList
+    {
+        public object? this[int index] { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public bool IsFixedSize => throw new NotImplementedException();
+
+        public bool IsReadOnly => throw new NotImplementedException();
+
+        public int Count => throw new NotImplementedException();
+
+        public bool IsSynchronized => throw new NotImplementedException();
+
+        public object SyncRoot => throw new NotImplementedException();
+
+        public int Add(object? value)
+        {
+            if(value == items.Length)
+            {
+                Array.Resize(ref items, items * 2);
+            }
+        }
+
+
+        public bool Contains(object? value)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CopyTo(Array array, int index)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int IndexOf(object? value)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Insert(int index, object? value)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove(object? value)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveAt(int index)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
