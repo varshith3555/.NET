@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>MyConsoleApp.Day9.RegEx</StartupObject>
+    <StartupObject>MyConsoleApp.Day9.BigBoyMain</StartupObject>
   </PropertyGroup>
 
 </Project>
