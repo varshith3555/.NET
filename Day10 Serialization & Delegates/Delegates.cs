@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace MyConsoleApp.Day10
+{
+    public delegate int DelegateAddFunctionName(int a, int b);
+    public class ExampleOfDelegate
+    {
+        public int a;
+        public int b;
+
+        public void DelegateEx1()
+        {
+            DelegateAddFunctionName delegateVarable = new DelegateAddFunctionName(AddMethod3);
+            delegateVarable(1, 2);
+        }
+
+        private int AddMethod3(int a, int b)
+        {
+            return a + b + 40;
+        }
+
+        private int AddMethod2(int a, int b)
+        {
+            return a + b + 10;
+        }
+    }
+}
