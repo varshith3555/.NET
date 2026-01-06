@@ -8,15 +8,17 @@ namespace MyConsoleApp.Day8
     {
         public static void Main()
         {
-            //PartialClass pc = new PartialClass();
-            //pc.Show();
+            PartialClass s = new PartialClass();
+            s.Id = 1;
+            s.Name = "John";
+            s.Course = "C#";
 
+            s.Display();
+            s.ShowCourse();
 
-            //Console.WriteLine(StaticConstructor.GetRollNo());
-
-            string sent = "Capp training";
-            int count = sent.WordCount();
-            Console.WriteLine(count);
+            //string sent = "Capp training";
+            //int count = sent.WordCount();
+            //Console.WriteLine(count);
         }
     }
 }

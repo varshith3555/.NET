@@ -6,9 +6,12 @@ namespace MyConsoleApp.Day8
 {
     public partial class PartialClass
     {
-    public void Company()
+        public int Id;
+        public string Name;
+
+        public void Display()
         {
-            Console.WriteLine("Capp");
+            Console.WriteLine($"Id: {Id}, Name: {Name}");
         }
     }
 }

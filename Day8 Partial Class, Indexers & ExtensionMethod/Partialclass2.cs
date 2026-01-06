@@ -7,9 +7,11 @@ namespace MyConsoleApp.Day8
 {
     public partial class PartialClass
     {
-        public void Show()
+        public string Course;
+
+        public void ShowCourse()
         {
-            Company();
+            Console.WriteLine($"Course: {Course}");
         }
     }
 }

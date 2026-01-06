@@ -5,12 +5,12 @@ using System.Text;
 
 namespace MyConsoleApp.Day9_RegEx___Garbage_Collection
 {
-     public class GenericsCustomization
+    public class GenericsCustomization
     {
         public GenericsCustomization()
         {
-        }
 
+        }
         public void ExampleOfList()
         {
             List<string> names = new List<string>();
@@ -36,12 +36,13 @@ namespace MyConsoleApp.Day9_RegEx___Garbage_Collection
 
         public int Add(object? value)
         {
-            if(value == items.Length)
-            {
-                Array.Resize(ref items, items * 2);
-            }
+            throw new NotImplementedException();
         }
 
+        public void Clear()
+        {
+            throw new NotImplementedException();
+        }
 
         public bool Contains(object? value)
         {

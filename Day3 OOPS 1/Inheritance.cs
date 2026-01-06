@@ -80,7 +80,7 @@ namespace MyConsoleApp.Day3
             };
 
             // Creating Man object but referencing it as Person (Polymorphism)
-            Person man = new Man
+            Man man = new Man
             {
                 Id = 10,
                 Name = "Kumar",

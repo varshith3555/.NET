@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MyConsoleApp.Day3
 {
-    internal class Classes
+    public class Classes
     {
         public string Name;
         public int StudentId;

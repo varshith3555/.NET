@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>MyConsoleApp.Day9.BigBoyMain</StartupObject>
+    <StartupObject>MyConsoleApp.Day1.EvenOrOdd</StartupObject>
   </PropertyGroup>
 
 </Project>
