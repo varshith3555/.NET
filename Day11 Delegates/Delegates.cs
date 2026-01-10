@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyConsoleApp.Day10
+namespace MyConsoleApp.Day11
 {
     public delegate int DelegateAddFunctionName(int a, int b);
     public class ExampleOfDelegate

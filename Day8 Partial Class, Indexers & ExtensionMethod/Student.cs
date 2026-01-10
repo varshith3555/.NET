@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 
+/// Create a class Student with public properties of RollNo, Name, private string for indexer 
+
 namespace MyConsoleApp.Day8
 {
     public class Student
@@ -39,4 +41,3 @@ namespace MyConsoleApp.Day8
     }
 }
 
-/// Create a class Student with public properties of RollNo, Name, private string for indexer 

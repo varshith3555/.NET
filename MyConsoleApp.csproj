@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>MyConsoleApp.Day1.EvenOrOdd</StartupObject>
+    <StartupObject>MyConsoleApp.Day11.MultiCastDelegates</StartupObject>
   </PropertyGroup>
 
 </Project>
