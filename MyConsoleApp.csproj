@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>MyConsoleApp.Day11.MultiCastDelegates</StartupObject>
+    <StartupObject>MyConsoleApp.Day12.EventExample</StartupObject>
   </PropertyGroup>
 
 </Project>
