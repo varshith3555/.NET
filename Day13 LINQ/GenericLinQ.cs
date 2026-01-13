@@ -14,13 +14,13 @@ namespace MyConsoleApp.Day13_LINQ
     public class ExampleOfGenericLinq
     {
         public static List<Employee> employees = new List<Employee>();
-
         public static void Main()
         {
             var localEmpList = GetData();
-            var fileterList = from emp in localEmpList
-                              select emp;
-            foreach (var emp in fileterList)
+            var filterList = from emp in localEmpList
+                             select emp;
+
+            foreach (var emp in filterList)
             {
                 Console.WriteLine(emp.Id + emp.Name + emp.RollNo);
             }
@@ -28,8 +28,8 @@ namespace MyConsoleApp.Day13_LINQ
 
         public static List<Employee> GetData()
         {
-            employees.Add(new Employee() { Id=1, Name="Capp", RollNo=1});
-            employees.Add(new Employee() { Id = 2, Name = "OnSIte", RollNo = 2 });
+            employees.Add(new Employee() { Id = 1, Name = "Capp", RollNo = 1 });
+            employees.Add(new Employee() { Id = 2, Name = "OnSite", RollNo = 2 });
             employees.Add(new Employee() { Id = 3, Name = "Training", RollNo = 3 });
             return employees;
         }
