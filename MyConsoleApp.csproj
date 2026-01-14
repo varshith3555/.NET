@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>MyConsoleApp.Day13_LINQ.ExampleOfGenericLinq</StartupObject>
+    <StartupObject>MyConsoleApp.Day14.Program</StartupObject>
   </PropertyGroup>
 
 </Project>
