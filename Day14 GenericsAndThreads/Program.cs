@@ -23,6 +23,7 @@ namespace MyConsoleApp.Day14
 
             string res = DelegateTypes.multiplyResult(5, 4);
             Console.WriteLine(res);
+
         }
     }
 }
