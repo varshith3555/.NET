@@ -8,8 +8,8 @@ namespace Day15_Practise_Questons
     }
     class User1
     {
-        public string? Name { get; set; }
-        public string? PhoneNumber { get; set; }
+        public string Name { get; set; }
+        public string PhoneNumber { get; set; }
     }
     class UserVerification
     {
