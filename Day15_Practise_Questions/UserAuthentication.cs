@@ -37,11 +37,11 @@ namespace Day15_Practise_Questons
 
             try
             {
-                // Sample input (change values to test)
+
                 User user = program.ValidatePassword(
-                    "John",
-                    "Password123",
-                    "Password123"
+                    "Nani",
+                    "Password@@123",
+                    "Password@@123"
                 );
 
                 if (user != null)
