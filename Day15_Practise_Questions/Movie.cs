@@ -54,11 +54,11 @@ namespace Day15_Practise_Questons
         {
             Console.Write("Enter number of movies: ");
             int n = int.Parse(Console.ReadLine());
-
+            
+            string details = Console.ReadLine();
             for (int i = 0; i < n; i++)
             {
                 Console.Write("Enter movie details (Title,Artist,Genre,Ratings): ");
-                string details = Console.ReadLine();
                 AddMovie(details);
             }
 

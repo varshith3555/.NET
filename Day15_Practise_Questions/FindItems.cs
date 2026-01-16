@@ -68,14 +68,10 @@ namespace MyConsoleApp.Day15_Practise_Questons
             int n = int.Parse(Console.ReadLine());
 
             // Get user input
+            string name = Console.ReadLine();
+            long count = long.Parse(Console.ReadLine());
             for (int i = 0; i < n; i++)
             {
-                Console.Write("Enter item name: ");
-                string name = Console.ReadLine();
-
-                Console.Write("Enter sold count: ");
-                long count = long.Parse(Console.ReadLine());
-
                 itemDetails.Add(name, count);
             }
 

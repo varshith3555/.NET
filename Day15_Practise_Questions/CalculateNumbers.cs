@@ -57,10 +57,10 @@ namespace MyConsoleApp.Day15_Practise_Questons
             Console.WriteLine("Enter the no of subjects");
             int n = int.Parse(Console.ReadLine());
 
+            int marks = int.Parse(Console.ReadLine());
             for(int i = 0; i < n; i++)
             {
                 Console.WriteLine("Enter marks");
-                int marks = int.Parse(Console.ReadLine());
                 AddNumber(marks);
             }
 
@@ -73,7 +73,6 @@ namespace MyConsoleApp.Day15_Practise_Questons
                 Console.WriteLine("Invalid GPA");
             else
                 Console.WriteLine("Grade: " + grade);
-
         }
     }
 }
