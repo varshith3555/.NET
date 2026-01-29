@@ -1,6 +1,7 @@
 .vs/
 bin/
 obj/
+# Day17 folder pushed to separate repository
 Day17_M1Prac/
 .vscode/
 Day08_PartialClass,Indexers&ExtensionMethod/
