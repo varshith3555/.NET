@@ -8,26 +8,26 @@ namespace MyConsoleApp.Day17_M1Prac
     {
         public static bool IsValidUsername(string username)
         {
-            if (username.Length != 8)
+            if(username.Length != 8)
                 return false;
 
-            for (int i = 0; i < 4; i++)
+            for(int i = 0; i < 4; i++)
             {
                 if (!char.IsUpper(username[i]))
                     return false;
             }
 
-            if (username[4] != '@')
+            if(username[4] != '@')
                 return false;
 
-            for (int i = 5; i < 8; i++)
+            for(int i = 5; i < 8; i++)
             {
                 if (!char.IsDigit(username[i]))
                     return false;
             }
 
             int courseId = int.Parse(username.Substring(5));
-            if (courseId < 101 || courseId > 115)
+            if(courseId < 101 || courseId > 115)
                 return false;
             return true;
         }
@@ -35,7 +35,7 @@ namespace MyConsoleApp.Day17_M1Prac
         public static string GeneratePassword(string username)
         {
             int asciiSum = 0;
-            for (int i = 0; i < 4; i++)
+            for(int i = 0; i < 4; i++)
             {
                 char ch = char.ToLower(username[i]);
                 asciiSum += (int)ch;
@@ -50,7 +50,7 @@ namespace MyConsoleApp.Day17_M1Prac
             Console.WriteLine("Enter the username");
             string username = Console.ReadLine();
 
-            if (!IsValidUsername(username))
+            if(!IsValidUsername(username))
             {
                 Console.WriteLine(username + " is an invalid username");
             }

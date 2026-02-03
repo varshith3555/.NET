@@ -10,15 +10,15 @@ using System;
     {
         public bool validateGadgetID(string gadgetID)
         {
-            if (gadgetID.Length != 4)
+            if(gadgetID.Length != 4)
                 throw new InvalidGadgetException("Invalid gadget ID");
 
-            if (!char.IsUpper(gadgetID[0]))
+            if(!char.IsUpper(gadgetID[0]))
                 throw new InvalidGadgetException("Invalid gadget ID");
 
-            for (int i = 1; i < 4; i++)
+            for(int i = 1; i < 4; i++)
             {
-                if (!char.IsDigit(gadgetID[i]))
+                if(!char.IsDigit(gadgetID[i]))
                     throw new InvalidGadgetException("Invalid gadget ID");
             }
 
@@ -27,7 +27,7 @@ using System;
 
         public bool validateWarrantyPeriod(int period)
         {
-            if (period < 6 || period > 36)
+            if(period < 6 || period > 36)
                 throw new InvalidGadgetException("Invalid warranty period");
 
             return true;
@@ -43,7 +43,7 @@ using System;
 
             GadgetValidatorUtil util = new GadgetValidatorUtil();
 
-            for (int i = 1; i <= n; i++)
+            for(int i = 1; i <= n; i++)
             {
                 Console.WriteLine($"Enter gadget {i} details");
                 string input = Console.ReadLine();
@@ -60,7 +60,7 @@ using System;
 
                     Console.WriteLine("Warranty accepted, stock updated");
                 }
-                catch (InvalidGadgetException e)
+                catch(InvalidGadgetException e)
                 {
                     Console.WriteLine(e.Message);
                 }

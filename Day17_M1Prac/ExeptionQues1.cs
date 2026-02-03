@@ -11,15 +11,15 @@ public class EntryUtility
 {
     public static bool validateEmployeeId(string EmpId)
     {
-        if (EmpId.Length != 10)
+        if(EmpId.Length != 10)
             throw new InvalidEntryException("Invalid Employee ID");
 
-        if (!EmpId.StartsWith("GOAIR/"))
+        if(!EmpId.StartsWith("GOAIR/"))
             throw new InvalidEntryException("Invalid Employee ID");
 
-        for (int i = 6; i < 10; i++)
+        for(int i = 6; i < 10; i++)
         {
-            if (!char.IsDigit(EmpId[i]))
+            if(!char.IsDigit(EmpId[i]))
                 throw new InvalidEntryException("Invalid Employee ID");
         }
 
@@ -28,19 +28,19 @@ public class EntryUtility
 
     public static bool validateDuration(int duration)
     {
-        if (duration < 1 || duration > 5)
+        if(duration < 1 || duration > 5)
             throw new InvalidEntryException("Invalid Duration");
            return true;
     }
 }
 
-public class UserInterface
+public class UserInterface1
 {
     public static void Main()
     {
         System.Console.WriteLine("Enter the number of entries");
         int no = int.Parse(Console.ReadLine());
-        for (int i = 1; i <= no; i++)
+        for(int i = 1; i <= no; i++)
         {
             Console.WriteLine($"Enter entry {i} details");
             string input = Console.ReadLine();
@@ -57,7 +57,7 @@ public class UserInterface
 
                 Console.WriteLine("Valid entry details");
             }
-            catch (Exception)
+            catch(Exception)
             {
                 Console.WriteLine("Invalid entry details");
             }

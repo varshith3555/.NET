@@ -4,5 +4,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <RootNamespace>MyConsoleApp.Day17M1Prac</RootNamespace>
+    <startupObject>Program</startupObject>
   </PropertyGroup>
 </Project>
