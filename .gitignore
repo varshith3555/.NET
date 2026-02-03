@@ -27,7 +27,8 @@ Day16_Practise
 Day16_M1_Practise
 Day19_Generics/Day19Generics.csproj
 Day19_Generics/PredActionFunc.cs
-# Day20-TopBrainAssessment/Day20-TopBrainAssesssment.csproj
-Day20-TopBrainAssessment
+Day20-TopBrainAssessment/Day20-TopBrainAssesssment.csproj
+Day20-TopBrainAssessment/TestMain.cs
+Day20-TopBrainAssessment/UnitTest.cs
 Mock
 
