@@ -2,7 +2,6 @@
 bin/
 obj/
 # Day17 folder pushed to separate repository
-Day17_M1Prac/StringQues2.cs
 .vscode/
 Day08_PartialClass,Indexers&ExtensionMethod/
 Day-21-Unit-Testing/
