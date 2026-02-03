@@ -2,7 +2,10 @@
 bin/
 obj/
 # Day17 folder pushed to separate repository
-Day17_M1Prac/
+Day17_M1Prac/ExceptionQues2.cs
+Day17_M1Prac/InterfaceQues1.cs
+Day17_M1Prac/StringQues2.cs
+Day17_M1Prac/StringQues1.cs
 .vscode/
 Day08_PartialClass,Indexers&ExtensionMethod/
 Day-21-Unit-Testing/
@@ -22,7 +25,6 @@ Day12 Enum & CustomException/Day12EnumCustomException.csproj
 Day13 LINQ/Day13LINQ.csproj
 Day14 GenericsAndThreads/Day14GenericsAndThreads.csproj
 Day15_Practise_Questions/Day15PractiseQuestions.csproj
-# Day16_Practise/Day16Practise.csproj
 Day16_Practise
 Day16_M1_Practise
 Day19_Generics/Day19Generics.csproj
