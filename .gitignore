@@ -6,3 +6,28 @@ Day17_M1Prac/
 .vscode/
 Day08_PartialClass,Indexers&ExtensionMethod/
 Day-21-Unit-Testing/
+
+# Project files
+Day01 Basics/Day01Basics.csproj
+Day02 Loops & Conditionals/Day02LoopsConditionals.csproj
+Day03 OOPS 1/Day03OOPS1.csproj
+Day04 OOPS 2/Day04OOPS2.csproj
+Day05 Abstract & Project References/Day05AbstractProjectReferences.csproj
+Day06 Interface & Multiple Inheritance/Day06InterfaceMultipleInheritance.csproj
+Day07 Collections/Day07Collections.csproj
+Day09 RegEx & Garbage Collection/Day09RegExGarbageCollection.csproj
+Day10 Serialization/Day10Serialization.csproj
+Day11 Delegates/Day11Delegates.csproj
+Day12 Enum & CustomException/Day12EnumCustomException.csproj
+Day13 LINQ/Day13LINQ.csproj
+Day14 GenericsAndThreads/Day14GenericsAndThreads.csproj
+Day15_Practise_Questions/Day15PractiseQuestions.csproj
+# Day16_Practise/Day16Practise.csproj
+Day16_Practise
+Day16_M1_Practise
+Day19_Generics/Day19Generics.csproj
+Day19_Generics/PredActionFunc.cs
+# Day20-TopBrainAssessment/Day20-TopBrainAssesssment.csproj
+Day20-TopBrainAssessment
+Mock
+

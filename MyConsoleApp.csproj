@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
-    <StartupObject>MyConsoleApp.Day08_.Program</StartupObject>
+    <StartupObject>MyConsoleApp.Day19_Generics.Program</StartupObject>
     <NoWarn>CS8632;CS8981;CS0169</NoWarn>
   </PropertyGroup>
 
