@@ -3,7 +3,7 @@ bin/
 obj/
 # Day17 folder pushed to separate repository
 .vscode/
-Day08_PartialClass,Indexers&ExtensionMethod/
+Day08_PartialClass,Indexers&ExtensionMethod/Day08PartialClassIndexersExtensionMethod.csproj
 Day-21-Unit-Testing/
 
 # Project files
