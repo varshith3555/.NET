@@ -28,3 +28,13 @@ Day19_Generics/PredActionFunc.cs
 Day20-TopBrainAssessment/Day20-TopBrainAssesssment.csproj
 Mock
 
+
+Day21-ExceptionHandlingPrac/ExceptionPropagation.cs
+Day21-ExceptionHandlingPrac/FileReader.cs
+Day21-ExceptionHandlingPrac/FileUpload.cs
+Day21-ExceptionHandlingPrac/GOAIRSecurity .cs
+Day21-ExceptionHandlingPrac/LoginSystem.cs
+Day21-ExceptionHandlingPrac/OrderProcessor.cs
+Day21-ExceptionHandlingPrac/RethrowException.cs
+Day21-ExceptionHandlingPrac/SafeNumericInputHandling.cs
+Day21-ExceptionHandlingPrac/ShopValidator.cs
