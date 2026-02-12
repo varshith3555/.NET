@@ -73,5 +73,23 @@ class Program{
             System.Console.WriteLine(i.Key + " " + i.Value);
         }
         #endregion
+        #region Palindrome
+        string input = Console.ReadLine();
+        char[] storing=input.ToCharArray();
+        int i=0;
+        int j=input.Length-1;
+        while (i <= j)
+        {
+            char temp=storing[i];
+            storing[i]=storing[j];
+            storing[j]=temp;
+            i++;
+            j--;
+        }
+        string inputNew=new string(storing);
+        Console.WriteLine("Palindrome Check: "+(input==inputNew));
+        #endregion
+
+        
     }
 }
