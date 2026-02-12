@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <StartupObject>GymStream.Program</StartupObject>
+    <StartupObject>GymStream.String</StartupObject>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
