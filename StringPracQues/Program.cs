@@ -92,22 +92,63 @@ class Program{
 
 
         #region SumOfElements
-        Console.WriteLine("Enter the num of elements: ");
-        int n = int.Parse(Console.ReadLine()!);
-        Console.WriteLine("Enter the elements: ");
-        int[] elements = new int[n];
-        for (int i = 0; i < n; i++)
-        {
-            elements[i] = int.Parse(Console.ReadLine()!);
-        }
-        int sum = elements.Sum(e=>e);
-        // foreach (var item in elements)
+        // Console.WriteLine("Enter the num of elements: ");
+        // int n = int.Parse(Console.ReadLine()!);
+        // Console.WriteLine("Enter the elements: ");
+        // int[] elements = new int[n];
+        // for (int i = 0; i < n; i++)
         // {
-        //     sum += item;
+        //     elements[i] = int.Parse(Console.ReadLine()!);
         // }
-        Console.WriteLine("Sum of elemets: " + sum);
+        // int sum = elements.Sum(e=>e);
+        // // foreach (var item in elements)
+        // // {
+        // //     sum += item;
+        // // }
+        // Console.WriteLine("Sum of elemets: " + sum);
         #endregion
 
-        
+       
+        #region MergeTwoSortedArray
+        Console.WriteLine("Enter number of elements for first sorted array:");
+        int n = int.Parse(Console.ReadLine()!);
+
+        int[] arr1 = new int[n];
+        Console.WriteLine("Enter sorted elements:");
+        for (int i = 0; i < n; i++)
+        {
+            arr1[i] = int.Parse(Console.ReadLine()!);
+        }
+
+        Console.WriteLine("Enter number of elements for second sorted array:");
+        int m = int.Parse(Console.ReadLine()!);
+
+        int[] arr2 = new int[m];
+        Console.WriteLine("Enter sorted elements:");
+        for (int i = 0; i < m; i++)
+        {
+            arr2[i] = int.Parse(Console.ReadLine()!);
+        }
+
+        int[] merged = new int[n + m];
+        int i1 = 0, i2 = 0, k = 0;
+
+        while (i1 < arr1.Length && i2 < arr2.Length)
+        {
+            if (arr1[i1] <= arr2[i2])
+                merged[k++] = arr1[i1++];
+            else
+                merged[k++] = arr2[i2++];
+        }
+        while (i1 < arr1.Length)
+            merged[k++] = arr1[i1++];
+
+        while (i2 < arr2.Length)
+            merged[k++] = arr2[i2++];
+        foreach (int num in merged)
+        {
+            Console.Write(num + " ");
+        }
+        #endregion
     }
 }
