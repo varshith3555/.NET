@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic;
+﻿using System.Security.Principal;
+using Microsoft.VisualBasic;
 
 class Program{
     static void Main(){
@@ -28,21 +29,48 @@ class Program{
 
         #region Remove duplicates
 
-        System.Console.WriteLine("Enter the no of elements");
-        int n = int.Parse(Console.ReadLine()!);
+        // System.Console.WriteLine("Enter the no of elements");
+        // int n = int.Parse(Console.ReadLine()!);
+
+        // List<int> list = new List<int>(); 
+        // System.Console.WriteLine("Enter the elements");
+        // for(int i = 0; i < n; i++)
+        // {
+        //     int temp = int.Parse(Console.ReadLine()!);
+        //     list.Add(temp);
+        // }
         
-        List<int> list = new List<int>(); 
-        System.Console.WriteLine("Enter the elements");
+        // HashSet<int> uniqueNumbers = new HashSet<int>(list);
+        // foreach(int num in uniqueNumbers)
+        // {
+        //     Console.Write(num + " ");
+        // }
+        #endregion
+
+        #region Frequency
+        System.Console.WriteLine("Enter the no. of elements");
+        int n = int.Parse(Console.ReadLine()!);
+        int[] arr = new int[n];
         for(int i = 0; i < n; i++)
         {
-            int temp = int.Parse(Console.ReadLine()!);
-            list.Add(temp);
+            arr[i] += int.Parse(Console.ReadLine()!);
         }
-        
-        HashSet<int> uniqueNumbers = new HashSet<int>(list);
-        foreach(int num in uniqueNumbers)
+
+        Dictionary<int, int> count = new Dictionary<int, int>();
+        foreach(var i in arr)
         {
-            Console.Write(num + " ");
+            if (count.ContainsKey(i))
+            {
+                count[i]++;
+            }
+            else
+            {
+                count[i] = 1;
+            }
+        }
+        foreach(var i in count)
+        {
+            System.Console.WriteLine(i.Key + " " + i.Value);
         }
         #endregion
     }
