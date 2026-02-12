@@ -48,46 +48,64 @@ class Program{
         #endregion
 
         #region Frequency
-        System.Console.WriteLine("Enter the no. of elements");
-        int n = int.Parse(Console.ReadLine()!);
-        int[] arr = new int[n];
-        for(int i = 0; i < n; i++)
-        {
-            arr[i] += int.Parse(Console.ReadLine()!);
-        }
+        // System.Console.WriteLine("Enter the no. of elements");
+        // int n = int.Parse(Console.ReadLine()!);
+        // int[] arr = new int[n];
+        // for(int i = 0; i < n; i++)
+        // {
+        //     arr[i] += int.Parse(Console.ReadLine()!);
+        // }
 
-        Dictionary<int, int> count = new Dictionary<int, int>();
-        foreach(var i in arr)
-        {
-            if (count.ContainsKey(i))
-            {
-                count[i]++;
-            }
-            else
-            {
-                count[i] = 1;
-            }
-        }
-        foreach(var i in count)
-        {
-            System.Console.WriteLine(i.Key + " " + i.Value);
-        }
+        // Dictionary<int, int> count = new Dictionary<int, int>();
+        // foreach(var i in arr)
+        // {
+        //     if (count.ContainsKey(i))
+        //     {
+        //         count[i]++;
+        //     }
+        //     else
+        //     {
+        //         count[i] = 1;
+        //     }
+        // }
+        // foreach(var i in count)
+        // {
+        //     System.Console.WriteLine(i.Key + " " + i.Value);
+        // }
         #endregion
         #region Palindrome
-        string input = Console.ReadLine();
-        char[] storing=input.ToCharArray();
-        int i=0;
-        int j=input.Length-1;
-        while (i <= j)
+        // string input = Console.ReadLine();
+        // char[] storing=input.ToCharArray();
+        // int i=0;
+        // int j=input.Length-1;
+        // while (i <= j)
+        // {
+        //     char temp=storing[i];
+        //     storing[i]=storing[j];
+        //     storing[j]=temp;
+        //     i++;
+        //     j--;
+        // }
+        // string inputNew=new string(storing);
+        // Console.WriteLine("Palindrome Check: "+(input==inputNew));
+        #endregion
+
+
+        #region SumOfElements
+        Console.WriteLine("Enter the num of elements: ");
+        int n = int.Parse(Console.ReadLine()!);
+        Console.WriteLine("Enter the elements: ");
+        int[] elements = new int[n];
+        for (int i = 0; i < n; i++)
         {
-            char temp=storing[i];
-            storing[i]=storing[j];
-            storing[j]=temp;
-            i++;
-            j--;
+            elements[i] = int.Parse(Console.ReadLine()!);
         }
-        string inputNew=new string(storing);
-        Console.WriteLine("Palindrome Check: "+(input==inputNew));
+        int sum = elements.Sum(e=>e);
+        // foreach (var item in elements)
+        // {
+        //     sum += item;
+        // }
+        Console.WriteLine("Sum of elemets: " + sum);
         #endregion
 
         
