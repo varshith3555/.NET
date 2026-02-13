@@ -1,35 +1,38 @@
 using System;
 
-public class Program
+namespace Day20TopBrainAssessment
 {
-    private decimal balance;
-
-    public decimal Balance
+    public class BankAccount
     {
-        get{ return balance; }
-        private set{ balance = value; }
-    }
+        private decimal balance;
 
-    public Program(decimal initialBalance)
-    {
-        if(initialBalance < 0)
-            throw new InvalidOperationException("Initial balance cannot be negative.");
-        Balance = initialBalance;
-    }
+        public decimal Balance
+        {
+            get{ return balance; }
+            private set{ balance = value; }
+        }
 
-    public void Deposit(decimal amount)
-    {
-        if(amount <= 0)
-            throw new InvalidOperationException("Deposit amount must be positive.");
-        Balance += amount;
-    }
+        public BankAccount(decimal initialBalance)
+        {
+            if(initialBalance < 0)
+                throw new InvalidOperationException("Initial balance cannot be negative.");
+            Balance = initialBalance;
+        }
 
-    public void Withdraw(decimal amount)
-    {
-        if(amount <= 0)
-            throw new InvalidOperationException("Withdrawal amount must be positive.");
-        if(amount > Balance)
-            throw new InvalidOperationException("Insufficient funds.");
-        Balance -= amount;
+        public void Deposit(decimal amount)
+        {
+            if(amount <= 0)
+                throw new InvalidOperationException("Deposit amount must be positive.");
+            Balance += amount;
+        }
+
+        public void Withdraw(decimal amount)
+        {
+            if(amount <= 0)
+                throw new InvalidOperationException("Withdrawal amount must be positive.");
+            if(amount > Balance)
+                throw new InvalidOperationException("Insufficient funds.");
+            Balance -= amount;
+        }
     }
 }
