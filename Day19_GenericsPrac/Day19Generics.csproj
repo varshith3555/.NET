@@ -3,6 +3,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
+    <startupObject>String</startupObject>
     <RootNamespace>MyConsoleApp.Day19Generics</RootNamespace>
   </PropertyGroup>
 </Project>

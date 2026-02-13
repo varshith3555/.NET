@@ -5,13 +5,19 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
-    <StartupObject>MyConsoleApp.Day19_Generics.Program</StartupObject>
+    <StartupObject>Gmail</StartupObject>
     <NoWarn>CS8632;CS8981;CS0169</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Day-21-Unit-Testing\**" />
     <Compile Remove="Day18_Unit_Testing\**\*.cs" />
-    <Compile Remove="Day-21-Unit-Testing\**\*.cs" />
+    <EmbeddedResource Remove="Day-21-Unit-Testing\**" />
+    <None Remove="Day-21-Unit-Testing\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.14.0" />
   </ItemGroup>
 
 </Project>
