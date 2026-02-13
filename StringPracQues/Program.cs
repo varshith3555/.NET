@@ -1,7 +1,7 @@
 ﻿using System.Security.Principal;
 using Microsoft.VisualBasic;
 
-class Program{
+class Program12{
     static void Main(){
 
         #region Reverse
@@ -91,7 +91,7 @@ class Program{
 
 
         #region SumOfElements
-        Console.WriteLine("Enter the num of elements: ");
+        Console.WriteLine("Enter the no of elements: ");
         int n = int.Parse(Console.ReadLine()!);
         Console.WriteLine("Enter the elements: ");
         int[] elements = new int[n];
@@ -99,11 +99,11 @@ class Program{
         {
             elements[i] = int.Parse(Console.ReadLine()!);
         }
-        int sum = elements.Sum(e=>e);
-        // foreach (var item in elements)
-        // {
-        //     sum += item;
-        // }
+        int sum = 0;
+        foreach (var item in elements)
+        {
+            sum += item;
+        }
         Console.WriteLine("Sum of elemets: " + sum);
         #endregion
 
