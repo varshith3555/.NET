@@ -28,7 +28,7 @@ Day19_Generics/PredActionFunc.cs
 Day20-TopBrainAssessment/Day20-TopBrainAssesssment.csproj
 Mock
 MeetQues/WeeklyTest.csproj
-
+CollectionsPrac/CollectionsPrac.csproj
 Day24-M1Ques/Day24-M1Ques.csproj
 Day24-AsyncAwait/Day24-AsyncAwait.csproj
 Day23
@@ -38,9 +38,7 @@ StringPracQues/StringPracQues.csproj
 MyConsoleApp.slnLaunch.user
 
 
-
-
-CollectionsPrac/
+ADO.NET/
 ScenarioBased10Feb/HospitalPatientManagementSystem.cs
 ScenarioBased10Feb/Ques2.cs
 ScenarioBased10Feb/Ques3.cs
