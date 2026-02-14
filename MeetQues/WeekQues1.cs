@@ -1,43 +1,93 @@
-namespace WeeklyTest{
-    class String
+﻿using System;
+using System.Collections.Generic;
+
+class Bike
+{
+    public string Model{get; set;}
+    public string Brand{get; set;}
+    public int PricePerDay{get; set;}
+}
+    
+class BikeUtility
+{
+    public void AddBikeDetails(string model, string brand, int pricePerDay)
     {
-        static void Main()
+        int key = Program.bikeDetails.Count + 1;
+        Bike bike = new Bike
         {
-            string s = "Varshith";
-            // string rev = "";
+            Model = model,
+            Brand = brand,
+            PricePerDay = pricePerDay
+        };
+        Program.bikeDetails.Add(key, bike);
+    }
 
-            // for(int i = s.Length - 1; i >= 0; i--){
-            //     rev += s[i];
-            // }
-            // Console.WriteLine(rev);
+    public SortedDictionary<string, List<Bike>> GroupBikesByBrand()
+    {
+        SortedDictionary<string, List<Bike>> result =
+            new SortedDictionary<string, List<Bike>>();
 
+        foreach(var item in Program.bikeDetails)
+        {
+            Bike bike = item.Value;
+            if(!result.ContainsKey(bike.Brand))
+                result[bike.Brand] = new List<Bike>();
+            result[bike.Brand].Add(bike);
+        }
+        return result;
+    }
+}
 
-            // For cuonting characters
-            // for(int i = 0; i < s.Length; i++)
-            // {
-            //     int count = 0;
-            //     for(int j = 0; j < s.Length; j++)
-            //     {
-            //         if(s[i] == s[j])
-            //             count++;
-            //     }
-            //     System.Console.WriteLine(count);
-            // }
+class Program
+{
+    public static SortedDictionary<int, Bike> bikeDetails = new SortedDictionary<int, Bike>();
 
+    static void Main()
+    {
+        BikeUtility utility = new BikeUtility();
+        while(true)
+        {
+            Console.WriteLine("1. Add Bike Details");
+            Console.WriteLine("2. Group Bikes By Brand");
+            Console.WriteLine("3. Exit");
+            Console.WriteLine();
+            Console.WriteLine("Enter your choice");
 
+            int choice = int.Parse(Console.ReadLine());
 
-            string word1 = Console.ReadLine()!;
-            string word2 = Console.ReadLine()!;
-
-            int delete = 0;
-            for(int i = 0; i < word1.Length; i++)
+            if(choice == 1)
             {
-                if(!word2.Contains(word1[i]))
+                Console.WriteLine("Enter the model");
+                string model = Console.ReadLine();
+
+                Console.WriteLine("Enter the brand");
+                string brand = Console.ReadLine();
+
+                Console.WriteLine("Enter the price per day");
+                int price = int.Parse(Console.ReadLine());
+
+                utility.AddBikeDetails(model, brand, price);
+
+                Console.WriteLine("Bike details added successfully");
+                Console.WriteLine();
+            }
+            else if(choice == 2)
+            {
+                var grouped = utility.GroupBikesByBrand();
+
+                foreach(var item in grouped)
                 {
-                    delete++;
+                    Console.WriteLine(item.Key);
+                    foreach(var bike in item.Value)
+                        Console.WriteLine(bike.Model);
+
+                    Console.WriteLine();
                 }
             }
-            System.Console.WriteLine(delete);
+            else if(choice == 3)
+            {
+                break;
+            }
         }
     }
 }
