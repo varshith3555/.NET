@@ -1,0 +1,140 @@
+<Solution>
+  <Folder Name="/01LMS/">
+    <Project Path="PractiseQues/01LMS/SBQues.csproj" />
+  </Folder>
+  <Folder Name="/02HotelRoomBooking/">
+    <Project Path="PractiseQues/02HotelRoomBooking/HRB.csproj" />
+  </Folder>
+  <Folder Name="/03EmployeeManagementSystem/">
+    <Project Path="PractiseQues/03EmployeeManagementSystem/EmployeeManagementSystem.csproj" />
+  </Folder>
+  <Folder Name="/04RestaurantMenuManagement/">
+    <Project Path="PractiseQues/04RestaurantMenuManagement/RestaurantMenuManagement.csproj" />
+  </Folder>
+  <Folder Name="/05E-commerceProductCatalog/">
+    <Project Path="PractiseQues/05E-commerceProductCatalog/E-commerceProductCatalog.csproj" />
+  </Folder>
+  <Folder Name="/06StudentGradeManagement/">
+    <Project Path="PractiseQues/06StudentGradeManagement/6StudentGradeManagement.csproj" />
+  </Folder>
+  <Folder Name="/07MovieTheaterBooking/">
+    <Project Path="PractiseQues/07MovieTheaterBooking/7MovieTheaterBooking.csproj" />
+  </Folder>
+  <Folder Name="/08GymMembershipManagement/">
+    <Project Path="PractiseQues/08GymMembershipManagement/8GymMembershipManagement.csproj" />
+  </Folder>
+  <Folder Name="/09CarRentalAgency/">
+    <Project Path="PractiseQues/09CarRentalAgency/9CarRentalAgency.csproj" />
+  </Folder>
+  <Folder Name="/16E-LearningPlatform/">
+    <Project Path="PractiseQues/16E-LearningPlatform/16ELearningPlatform.csproj" />
+  </Folder>
+  <Folder Name="/Day-21-Unit-Testing/">
+    <Project Path="Day-21-Unit-Testing/EmployeeApp.Core/EmployeeApp.Core.csproj" />
+    <Project Path="Day-21-Unit-Testing/EmployeeApp.Tests/EmployeeApp.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Day01 Basics/">
+    <Project Path="Day01 Basics/Day01Basics.csproj" />
+  </Folder>
+  <Folder Name="/Day02 Loops &amp; Conditionals/">
+    <Project Path="Day02 Loops &amp; Conditionals/Day02LoopsConditionals.csproj" />
+  </Folder>
+  <Folder Name="/Day03 OOPS 1/">
+    <Project Path="Day03 OOPS 1/Day03OOPS1.csproj" />
+  </Folder>
+  <Folder Name="/Day04 OOPS 2/">
+    <Project Path="Day04 OOPS 2/Day04OOPS2.csproj" />
+  </Folder>
+  <Folder Name="/Day05 Abstract &amp; Project References/">
+    <Project Path="Day05 Abstract &amp; Project References/Day05AbstractProjectReferences.csproj" />
+  </Folder>
+  <Folder Name="/Day06 Interface &amp; Multiple Inheritance/">
+    <Project Path="Day06 Interface &amp; Multiple Inheritance/Day06InterfaceMultipleInheritance.csproj" />
+  </Folder>
+  <Folder Name="/Day07 Collections/">
+    <Project Path="Day07 Collections/Day07Collections.csproj" />
+  </Folder>
+  <Folder Name="/Day08_PartialClass,Indexers&amp;ExtensionMethod/">
+    <Project Path="Day08_PartialClass,Indexers&amp;ExtensionMethod/Day08PartialClassIndexersExtensionMethod.csproj" />
+  </Folder>
+  <Folder Name="/Day09 RegEx &amp; Garbage Collection/">
+    <Project Path="Day09 RegEx &amp; Garbage Collection/Day09RegExGarbageCollection.csproj" />
+  </Folder>
+  <Folder Name="/Day10 Serialization/">
+    <Project Path="Day10 Serialization/Day10Serialization.csproj" />
+  </Folder>
+  <Folder Name="/Day11 Delegates/">
+    <Project Path="Day11 Delegates/Day11Delegates.csproj" />
+  </Folder>
+  <Folder Name="/Day12 Enum &amp; CustomException/">
+    <Project Path="Day12 Enum &amp; CustomException/Day12EnumCustomException.csproj" />
+  </Folder>
+  <Folder Name="/Day13 LINQ/">
+    <Project Path="Day13 LINQ/Day13LINQ.csproj" />
+  </Folder>
+  <Folder Name="/Day14 GenericsAndThreads/">
+    <Project Path="Day14 GenericsAndThreads/Day14GenericsAndThreads.csproj" />
+  </Folder>
+  <Folder Name="/Day15_Practise_Questions/">
+    <Project Path="Day15_Practise_Questions/Day15PractiseQuestions.csproj" />
+  </Folder>
+  <Folder Name="/Day16_Practise/">
+    <Project Path="Day16_Practise/Day16Practise.csproj" />
+  </Folder>
+  <Folder Name="/Day17_M1Prac/">
+    <Project Path="Day17_M1Prac/Day17M1Prac.csproj" />
+  </Folder>
+  <Folder Name="/Day18_Unit_Testing/">
+    <Project Path="Day18_Unit_Testing/EmployeeApp.Core/EmployeeApp.Core.csproj" />
+    <Project Path="Day18_Unit_Testing/EmployeeApp.Tests/EmployeeApp.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Day19_GenericsPrac/">
+    <Project Path="Day19_GenericsPrac/Day19Generics.csproj" />
+  </Folder>
+  <Folder Name="/Day20-TopBrainAssessment/">
+    <Project Path="Day20-TopBrainAssessment/Day20-TopBrainAssesssment.csproj" />
+  </Folder>
+  <Folder Name="/Day22-UseCasePractice/">
+    <Project Path="Day22-UseCasePractice/GymStream/GymStream.csproj" />
+    <Project Path="Day22-UseCasePractice/LogisticsPro/LogisticsPro.csproj" />
+  </Folder>
+  <Folder Name="/Day23/">
+    <Project Path="Day23/PasswordHasher/PasswordHasher.csproj" />
+    <Project Path="Day23/RateLimiter/RateLimiter.csproj" />
+    <Project Path="Day23/TicketBooking/TicketBooking.csproj" />
+  </Folder>
+  <Folder Name="/MeetQues/">
+    <Project Path="MeetQues/WeeklyTest.csproj" />
+  </Folder>
+  <Folder Name="/Mock/">
+    <Project Path="Mock/MockProject/MockProject.csproj" />
+  </Folder>
+  <Folder Name="/Strings/">
+    <Project Path="PractiseQues/Strings/FlipKey.csproj" />
+  </Folder>
+  <Folder Name="/UniverSity Course Registration System/">
+    <Project Path="ScenarioBased10Feb/UniverSity Course Registration System/UniverSity Course Registration System/UniverSity Course Registration System.csproj" />
+  </Folder>
+  <Project Path="ADO.NET/ADO.NET.csproj" />
+  <Project Path="CollectionsPrac/CollectionsPrac.csproj" />
+  <Project Path="Day21-ExceptionHandlingPrac/Day21-ExceptionHandlingPrac.csproj" />
+  <Project Path="Day24-AsyncAwait/Day24-AsyncAwait.csproj" />
+  <Project Path="Day24-M1Ques/Day24-M1Ques.csproj" />
+  <Project Path="PractiseQues/10HospitalPatientManagement/10HospitalPatientManagement.csproj" />
+  <Project Path="PractiseQues/11OnlineFoodDelivery/11OnlineFoodDelivery.csproj" />
+  <Project Path="PractiseQues/12MusicStreamingService/12MusicStreamingService.csproj" />
+  <Project Path="PractiseQues/13BankAccountManagement/13BankAccountManagement.csproj" />
+  <Project Path="PractiseQues/14FlightBookingSystem/14FlightBookingSystem.csproj" />
+  <Project Path="PractiseQues/15TaskManagementSystem/15TaskManagementSystem.csproj" />
+  <Project Path="PractiseQues/17InventoryStockManagement/17InventoryStockManagement.csproj" />
+  <Project Path="PractiseQues/18EventManagementSystem/18EventManagementSystem.csproj" />
+  <Project Path="PractiseQues/19CourierDeliveryTracking/19CourierDeliveryTracking.csproj" />
+  <Project Path="PractiseQues/20RealEstatePropertyManagement/20RealEstatePropertyManagement.csproj" />
+  <Project Path="PractiseQues/21SocialMediaPostManagement/21SocialMediaPostManagement.csproj" />
+  <Project Path="PractiseQues/Collections/Collections.csproj" />
+  <Project Path="PractiseQues/Interface/Interface.csproj" />
+  <Project Path="PractiseQues/M1_Assessment/M1_Assessment.csproj" />
+  <Project Path="PractiseQues/PractiseQues.csproj" />
+  <Project Path="ScenarioBased10Feb/ScenarioBased10Feb.csproj" />
+  <Project Path="StringPracQues/StringPracQues.csproj" />
+</Solution>
