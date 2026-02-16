@@ -4,12 +4,13 @@ using Microsoft.Data.SqlClient;
 
 class Program1
 {
+    private const string ConnectionString = "Server=localhost\\SQLEXPRESS;Database=CustomerOrder;Trusted_Connection=True;TrustServerCertificate=True;";
+
     static void Main()
     {
-        string connectionString = "Server=localhost\\SQLEXPRESS;Database=CustomerOrder;Trusted_Connection=True;TrustServerCertificate=True;";
-        string sql = "Select CustomerId, FullName, City FROM dbo.Customers; SELECT * FROM dbo.Orders";
+        string sql = "SELECT CustomerId, FullName, City, Segment, IsActive, CreatedOn FROM dbo.Customers; SELECT * FROM dbo.Orders";
         DataSet ds = new DataSet();
-        using (var con = new SqlConnection(connectionString))
+        using (var con = new SqlConnection(ConnectionString))
         using (var cmd = new SqlCommand(sql, con))
         {
             con.Open();
@@ -31,21 +32,17 @@ class Program1
             }
             Console.WriteLine();
         }
-         // INSERT Operation
+        
         Console.WriteLine("\n--- INSERT OPERATION ---");
-        InsertCustomer(ds, cs);
+            InsertCustomer(ds, ConnectionString);
         Console.WriteLine("\nData After INSERT:");
         DisplayTableData(ds);
-
-        // UPDATE Operation
         Console.WriteLine("\n--- UPDATE OPERATION ---");
-        UpdateCustomer(ds, cs);
+        UpdateCustomer(ds, ConnectionString);
         Console.WriteLine("\nData After UPDATE:");
         DisplayTableData(ds);
-
-        // DELETE Operation
         Console.WriteLine("\n--- DELETE OPERATION ---");
-        DeleteCustomer(ds, cs);
+        DeleteCustomer(ds, ConnectionString);
         Console.WriteLine("\nData After DELETE:");
         DisplayTableData(ds);
     }
@@ -56,16 +53,12 @@ class Program1
             Console.WriteLine("No records found!");
             return;
         }
-
-        // Print column headers
-        foreach (DataColumn col in ds.Tables[0].Columns)
+        foreach (DataColumn col in ds.Tables[0].Columns) // Print column headers
         {
             Console.Write(col.ColumnName + "\t");
         }
         Console.WriteLine();
-
-        // Print rows
-        foreach (DataRow row in ds.Tables[0].Rows)
+        foreach (DataRow row in ds.Tables[0].Rows) // Print rows
         {
             foreach (var item in row.ItemArray)
             {
@@ -86,9 +79,7 @@ class Program1
         newRow["IsActive"] = true;
         newRow["CreatedOn"] = DateTime.Now;
         ds.Tables[0].Rows.Add(newRow);
-        ds.AcceptChanges();
         
-
         using (var con = new SqlConnection(cs))
         using (var cmd = new SqlCommand("SELECT * FROM dbo.Customers", con))
         {
@@ -118,7 +109,6 @@ class Program1
                 adapter.Update(ds, "Table");
                 Console.WriteLine("Record Updated Successfully!");
 
-                // Reload data from database
                 ds.Tables[0].Clear();
                 adapter.Fill(ds.Tables[0]);
             }
@@ -140,8 +130,6 @@ class Program1
                 SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(adapter);
                 adapter.Update(ds, "Table");
                 Console.WriteLine("Record Deleted Successfully!");
-
-                // Reload data from database
                 ds.Tables[0].Clear();
                 adapter.Fill(ds.Tables[0]);
             }
