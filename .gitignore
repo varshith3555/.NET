@@ -1,10 +1,7 @@
 .vs/
 bin/
 obj/
-# Day17 folder pushed to separate repository
 .vscode/
-Day08_PartialClass,Indexers&ExtensionMethod/Day08PartialClassIndexersExtensionMethod.csproj
-Day-21-Unit-Testing/
 
 # Project files
 Day01 Basics/Day01Basics.csproj
@@ -14,6 +11,7 @@ Day04 OOPS 2/Day04OOPS2.csproj
 Day05 Abstract & Project References/Day05AbstractProjectReferences.csproj
 Day06 Interface & Multiple Inheritance/Day06InterfaceMultipleInheritance.csproj
 Day07 Collections/Day07Collections.csproj
+Day08_PartialClass,Indexers&ExtensionMethod/Day08PartialClassIndexersExtensionMethod.csproj
 Day09 RegEx & Garbage Collection/Day09RegExGarbageCollection.csproj
 Day10 Serialization/Day10Serialization.csproj
 Day11 Delegates/Day11Delegates.csproj
@@ -26,20 +24,8 @@ Day16_M1_Practise
 Day19_GenericsPrac/Day19Generics.csproj
 Day19_Generics/PredActionFunc.cs
 Day20-TopBrainAssessment/Day20-TopBrainAssesssment.csproj
-Mock
 MeetQues/WeeklyTest.csproj
-CollectionsPrac/CollectionsPrac.csproj
-Day24-M1Ques/Day24-M1Ques.csproj
-Day24-AsyncAwait/Day24-AsyncAwait.csproj
-Day23
-ScenarioBased10Feb/ScenarioBased10Feb.csproj
-ScenarioBased10Feb/UniverSity Course Registration System/
-StringPracQues/StringPracQues.csproj
 MyConsoleApp.slnLaunch.user
 
-
-ScenarioBased10Feb/HospitalPatientManagementSystem.cs
-ScenarioBased10Feb/Ques2.cs
-ScenarioBased10Feb/Ques3.cs
-ScenarioBased10Feb/Ques4.cs
-StringPracQues/StringConnection.cs
+Day27_ScenarioBased/E-Commerce.cs
+Day31_AdoDotNetwithLINQ/Prac.cs
