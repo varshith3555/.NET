@@ -7,8 +7,7 @@ namespace ADO
     {
         static void Main()
         {
-            string connectionString =
-            "Server=REDDY\\SQLEXPRESS;Database=CustomerOrder;Trusted_Connection=True;TrustServerCertificate=True;";
+            string connectionString = "Server=REDDY\\SQLEXPRESS;Database=CustomerOrder;Trusted_Connection=True;TrustServerCertificate=True;";
 
             #region DISPLAY ALL CUSTOMERS
             Console.WriteLine("----- All Customers -----");
@@ -52,97 +51,109 @@ namespace ADO
 
                 while (reader.Read())
                 {
-                    Console.WriteLine(
-                        $"{reader["CustomerId"]} | " +
-                        $"{reader["FullName"]} | " +
-                        $"{reader["City"]}"
-                    );
+                    Console.WriteLine($"{reader["CustomerId"]} | {reader["FullName"]} | {reader["City"]}");
                 }
+                con.Close();
             }
             #endregion
 
 
-            #region INSERT
-            Console.WriteLine("\n----- Insert New Customer -----");
+             Console.WriteLine("Enter operation (insert, update, delete): ");
+        string op = Console.ReadLine()?.Trim().ToLower() ?? "";
 
-            Console.Write("Enter CustomerId: ");
-            int newId = int.Parse(Console.ReadLine() ?? "0");
+        if (op == "insert")
+        {
+            Console.Write("CustomerId: ");
+            int id = int.Parse(Console.ReadLine()!);
+            Console.Write("Full Name: ");
+            string fullName = Console.ReadLine() ?? "";
+            Console.Write("City: ");
+            string cityInsert = Console.ReadLine() ?? "";
+            Console.Write("Segment: ");
+            string segment = Console.ReadLine() ?? "";
+            Console.Write("IsActive (true/false): ");
+            bool isActive = bool.Parse(Console.ReadLine() ?? "true");
 
-            Console.Write("Enter FullName: ");
-            string newName = Console.ReadLine() ?? "";
-
-            Console.Write("Enter City: ");
-            string newCity = Console.ReadLine() ?? "";
-
-            string insertSql = @"INSERT INTO dbo.Customers
-                                 (CustomerId, FullName, City, CreatedOn)
-                                 VALUES (@id, @name, @city, @createdOn)";
-
+            string insertSql = "INSERT INTO dbo.Customers (CustomerId, FullName, City, Segment, IsActive, CreatedOn) VALUES (@id, @fullName, @city, @segment, @isActive, @createdOn)";
             using (SqlConnection con = new SqlConnection(connectionString))
-            using (SqlCommand cmd = new SqlCommand(insertSql, con))
+            using (SqlCommand cmdInsert = new SqlCommand(insertSql, con))
             {
-                cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = newId;
-                cmd.Parameters.Add("@name", System.Data.SqlDbType.NVarChar, 100).Value = newName;
-                cmd.Parameters.Add("@city", System.Data.SqlDbType.NVarChar, 100).Value = newCity;
-                cmd.Parameters.Add("@createdOn", System.Data.SqlDbType.DateTime).Value = DateTime.Now;
-
+                cmdInsert.Parameters.AddWithValue("@id", id);
+                cmdInsert.Parameters.AddWithValue("@fullName", fullName);
+                cmdInsert.Parameters.AddWithValue("@city", cityInsert);
+                cmdInsert.Parameters.AddWithValue("@segment", segment);
+                cmdInsert.Parameters.AddWithValue("@isActive", isActive);
+                cmdInsert.Parameters.AddWithValue("@createdOn", DateTime.Now);
                 con.Open();
-                int rows = cmd.ExecuteNonQuery();
-
-                Console.WriteLine(rows > 0 ? "Insert Successful" : "Insert Failed");
+                int rows = cmdInsert.ExecuteNonQuery();
+                Console.WriteLine($"Inserted {rows} row(s).");
             }
-            #endregion
-
-
-            #region UPDATE
-            Console.WriteLine("\n----- Update Customer City -----");
-
-            Console.Write("Enter CustomerId to Update: ");
-            int updateId = int.Parse(Console.ReadLine() ?? "0");
-
-            Console.Write("Enter New City: ");
-            string updateCity = Console.ReadLine() ?? "";
-
-            string updateSql = @"UPDATE dbo.Customers
-                                 SET City = @city
-                                 WHERE CustomerId = @id";
-
-            using (SqlConnection con = new SqlConnection(connectionString))
-            using (SqlCommand cmd = new SqlCommand(updateSql, con))
-            {
-                cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = updateId;
-                cmd.Parameters.Add("@city", System.Data.SqlDbType.NVarChar, 100).Value = updateCity;
-
-                con.Open();
-                int rows = cmd.ExecuteNonQuery();
-
-                Console.WriteLine(rows > 0 ? "Update Successful" : "No Record Found");
-            }
-            #endregion
-
-
-            #region DELETE
-            Console.WriteLine("\n----- Delete Customer -----");
-
-            Console.Write("Enter CustomerId to Delete: ");
-            int deleteId = int.Parse(Console.ReadLine() ?? "0");
-
-            string deleteSql = @"DELETE FROM dbo.Customers
-                                 WHERE CustomerId = @id";
-
-            using (SqlConnection con = new SqlConnection(connectionString))
-            using (SqlCommand cmd = new SqlCommand(deleteSql, con))
-            {
-                cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = deleteId;
-
-                con.Open();
-                int rows = cmd.ExecuteNonQuery();
-
-                Console.WriteLine(rows > 0 ? "Delete Successful" : "No Record Found");
-            }
-            #endregion
-
-            Console.WriteLine("\nProgram Finished.");
         }
+        else if (op == "update")
+        {
+            Console.Write("CustomerId to update: ");
+            int id = int.Parse(Console.ReadLine() ?? "0");
+            Console.Write("New Full Name: ");
+            string newName = Console.ReadLine() ?? "";
+            Console.Write("New City: ");
+            string newCity = Console.ReadLine() ?? "";
+            Console.Write("New Segment: ");
+            string newSegment = Console.ReadLine() ?? "";
+            Console.Write("IsActive (true/false): ");
+            bool isActive = bool.Parse(Console.ReadLine() ?? "true");
+
+            string updateSql = "UPDATE dbo.Customers SET FullName = @newName, City = @newCity, Segment = @segment, IsActive = @isActive WHERE CustomerId = @id";
+            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlCommand cmdUpdate = new SqlCommand(updateSql, con))
+            {
+                cmdUpdate.Parameters.AddWithValue("@id", id);
+                cmdUpdate.Parameters.AddWithValue("@newName", newName);
+                cmdUpdate.Parameters.AddWithValue("@newCity", newCity);
+                cmdUpdate.Parameters.AddWithValue("@segment", newSegment);
+                cmdUpdate.Parameters.AddWithValue("@isActive", isActive);
+                con.Open();
+                int rows = cmdUpdate.ExecuteNonQuery();
+                Console.WriteLine($"Updated {rows} row(s).");
+            }
+        }
+        else if (op == "delete")
+        {
+            Console.Write("CustomerId to delete: ");
+            string id = Console.ReadLine() ?? "";
+
+            string deleteSql = "DELETE FROM dbo.Customers WHERE CustomerId = @id";
+            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlCommand cmdDelete = new SqlCommand(deleteSql, con))
+            {
+                cmdDelete.Parameters.AddWithValue("@id", id);
+                con.Open();
+                int rows = cmdDelete.ExecuteNonQuery();
+                Console.WriteLine($"Deleted {rows} row(s).");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Unknown operation.");
+        }
+    }
+
+    private static void NewMethod(SqlConnection con, out SqlCommand cmd, out SqlDataReader reader)
+    {
+        #region Query Command
+        string sql = "SELECT CustomerId, FullName, City FROM dbo.Customers";
+        cmd = new SqlCommand(sql, con);
+        con.Open();
+        reader = cmd.ExecuteReader();
+        while (reader.Read())
+        {
+            Console.WriteLine(
+                $"{reader["CustomerId"]} | " +
+                $"{reader["FullName"]} | " +
+                $"{reader["City"]}"
+            );
+        }
+        con.Close();
+        #endregion
+    }
     }
 }
