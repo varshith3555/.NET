@@ -75,6 +75,9 @@
   <Folder Name="/Day14 GenericsAndThreads/">
     <Project Path="Day14 GenericsAndThreads/Day14GenericsAndThreads.csproj" />
   </Folder>
+  <Folder Name="/Day32_GenericsAndDelegates/">
+    <Project Path="Day32_GenericsAndDelegates/Day32_GenericsAndDelegates.csproj" />
+  </Folder>
   <Folder Name="/Day15_Practise_Questions/">
     <Project Path="Day15_Practise_Questions/Day15PractiseQuestions.csproj" />
   </Folder>

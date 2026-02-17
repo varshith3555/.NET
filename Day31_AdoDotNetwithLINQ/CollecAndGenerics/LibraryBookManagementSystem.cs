@@ -11,7 +11,6 @@ public class Book
     public bool IsAvailable { get; set; }
 }
 
-// Generic catalog class
 public class Catalog<T> where T : Book
 {
     private List<T> _items = new List<T>();
@@ -32,7 +31,6 @@ public class Catalog<T> where T : Book
             _genreIndex[item.Genre] = new List<T>();
         }
         _genreIndex[item.Genre].Add(item);
-
         return true;
     }
     
