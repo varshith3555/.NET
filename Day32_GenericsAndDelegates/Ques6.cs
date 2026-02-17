@@ -4,7 +4,6 @@ public class Program6
 {
     // Custom delegate type (industry common in legacy code-bases)
     public delegate void Notifier(string message);
-
     public static void Main()
     {
         Notifier pipeline = BuildPipeline();        // Combine multiple methods
