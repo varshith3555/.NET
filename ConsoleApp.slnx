@@ -123,6 +123,7 @@
   <Project Path="Day21-ExceptionHandlingPrac/Day21-ExceptionHandlingPrac.csproj" />
   <Project Path="Day24-AsyncAwait/Day24-AsyncAwait.csproj" />
   <Project Path="Day24-M1Ques/Day24-M1Ques.csproj" />
+  <Project Path="Day33_OOPsPractise/Day33_OOPsPractise.csproj" />
   <Project Path="PractiseQues/10HospitalPatientManagement/10HospitalPatientManagement.csproj" />
   <Project Path="PractiseQues/11OnlineFoodDelivery/11OnlineFoodDelivery.csproj" />
   <Project Path="PractiseQues/12MusicStreamingService/12MusicStreamingService.csproj" />
